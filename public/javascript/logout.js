@@ -1,5 +1,3 @@
-
-
 async function logout() {
     const response = await fetch('/api/users/logout', {
         method: 'post',
@@ -12,5 +10,8 @@ async function logout() {
         alert(response.statusText);
     }
 }
+
+// logs out of the page after 5 minutes
+setInterval(logout, 300000);
 
 document.querySelector('#logout').addEventListener('click',logout);
